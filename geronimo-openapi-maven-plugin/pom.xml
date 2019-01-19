@@ -114,6 +114,12 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+    <dependency><!-- used for verification -->
+      <groupId>com.reprezen.kaizen</groupId>
+      <artifactId>openapi-parser</artifactId>
+      <version>4.0.3</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -145,7 +151,8 @@
             <goal>clean</goal>
             <goal>install</goal>
           </goals>
-          <postBuildHookScript>verify.bsh</postBuildHookScript>
+          <postBuildHookScript>verify</postBuildHookScript>
+          <addTestClassPath>true</addTestClassPath>
         </configuration>
         <executions>
           <execution>

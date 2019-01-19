@@ -6,3 +6,6 @@ if ( !generated.isFile() )
 {
     throw new FileNotFoundException( "Could not find generated OpenAPI definition: " + file );
 }
+
+com.reprezen.kaizen.oasparser.OpenApi3Parser parser = new com.reprezen.kaizen.oasparser.OpenApi3Parser();
+return parser.parse(generated, true).isValid();
